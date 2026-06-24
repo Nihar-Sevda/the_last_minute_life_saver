@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deadline Rescue AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🚀 Deadline Rescue AI</h1>
+
+    <form action="/create-plan" method="POST">
+
+        <label>Goal</label>
+        <input
+            type="text"
+            name="goal"
+            placeholder="Learn Flask in 3 days"
+            required
+        >
+
+        <label>Deadline</label>
+        <input
+            type="date"
+            name="deadline"
+            required
+        >
+
+        <label>Hours Available Per Day</label>
+        <input
+            type="number"
+            name="daily_hours"
+            min="1"
+            max="24"
+            required
+        >
+
+        <button type="submit">
+            Generate Plan
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
